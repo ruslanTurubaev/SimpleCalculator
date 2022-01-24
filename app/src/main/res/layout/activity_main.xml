@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/insert_panel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textSize="60sp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/result_panel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textSize="60sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <com.example.simplecalculator.AnimatedView
+            android:id="@+id/animatedView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_number_7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/_7"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_number_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/_4"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_number_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/_1"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_dot"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/dot"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_number_8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/_8"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_number_5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/_5"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_number_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/_2"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_number_0"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/_0"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_number_9"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/_9"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_number_6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/_6"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_number_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/_3"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_equal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:isEqualButton="true"
+                android:onClick="onClickButton"
+                android:text="@string/equal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_plus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/plus"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_minus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/minus"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_multiply"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/multiply"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_divide"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/divide"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_left_bracket"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/left_bracket"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_right_bracket"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/right_bracket"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_square_root"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/square_root"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_power"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/power"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_cursor_back"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/cursor_back"/>
+
+            <com.example.simplecalculator.CustomButton
+                android:id="@+id/button_clear"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickButton"
+                android:text="@string/clear"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
